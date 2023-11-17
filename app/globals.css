@@ -2,26 +2,117 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: 'Roboto', 'Montserrat', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1A1A1A;
+  color: #FFA500;
+}
+
+.main {
+  margin: 0 10% 0 10%;
+}
+
+
+@layer base {
+  button {
+    @apply bg-teal-400 text-gray-950 px-2 rounded hover:bg-teal-300 mt-2;
+  }
+  h1 {
+    @apply lg:text-4xl sm:text-2xl font-bold text-orange-600;
+  }
+  h2 {
+    @apply lg:text-3xl sm:text-2xl font-bold text-orange-600;
+  }
+  h3 {
+    @apply lg:text-2xl sm:text-xl font-bold text-orange-600;
+  }
+  h4 {
+    @apply text-xl font-bold text-orange-600;
+  }
+  h5 {
+    @apply text-lg font-bold text-orange-600;
+  }
+  p {
+    @apply text-base text-orange-400;
+  }
+  ul {
+    @apply list-disc pl-5 text-orange-400;
+  }
+  ol {
+    @apply list-decimal pl-5 text-orange-400;
+  }
+  nav {
+    @apply bg-gray-800 text-white lg:h-12 sm:h-9 flex justify-end items-center;
+  }
+  input {
+    @apply border border-gray-400 rounded p-2 text-left lg:w-60 sm:w-20;
+  }
+  td {
+    @apply text-center lg:px-4 sm:px-2;
+  }
+}
+
+/* @layer components {
+  .radio {
+    @apply w-4 h-4 text-blue-600 bg-gray-100 border-gray-400;
+  }
+} */
+
+.atom-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.nucleus {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.orbit {
+    position: absolute;
+    border: 1px solid gray;
+    border-radius: 50%;
+}
+
+.oval {
+    position: absolute;
+    clip-path: ellipse(40% 20% at 50% 50%);
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+
+.oval2 {
+    position: absolute;
+    clip-path: ellipse(40% 20% at 50% 50%);
+    width: 200px;
+    height: 200px;
+    border: 1px solid gray;
+}
+
+.orbit1 { width: 100px; height: 100px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.orbit2 { width: 150px; height: 150px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.orbit3 { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+
+.electron {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    /* Initial position can be set here */
 }
