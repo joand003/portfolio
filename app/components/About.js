@@ -1,10 +1,12 @@
 "use client"
 import React, { useRef} from 'react'
 import Link from 'next/link'
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function About() {
-    const ref = useRef();
+    // const ref = useRef();
+
+    // const isInView = useInView(ref, {once: true});
 
 
   return (
@@ -21,7 +23,7 @@ export default function About() {
         transition={{ duration: 0.5 }} className='mt-4'>My experience as an educator has not only refined my problem-solving skills but also given me profound insights into how individuals engage with and learn from technology. This understanding was put into practice with my <Link href="https://www.anderslandscience.com/" className='font-bold underline text-fuchsia-300'>personal website</Link>, initially conceived as a tool to enhance my students&apos; learning experience. It served as a dynamic platform where interactive elements merged seamlessly with educational content, significantly contributing to their understanding of Chemistry. Although far from perfect, it was a great starting point for my coding journey.</motion.p>
         <motion.p initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }} className='mt-4'>This project sparked a deeper interest in the potential of web development. It was a pivotal moment when my passion for teaching organically evolved into a passion for coding. The success and impact of this website laid the foundation for my subsequent projects, including the development of innovative apps focused on <Link href="https://www.anderslandscience.com/" className='font-bold underline text-fuchsia-300'>weightlifting</Link> and <Link href="https://www.anderslandscience.com/" className='font-bold underline text-fuchsia-300'>diving</Link>. These applications are a testament to the skills I've developed over time, highlighting my journey from an educator to a proficient full-stack developer. They demonstrate my ability to construct comprehensive digital solutions that encompass both front-end and back-end development. Each app serves as a practical example of my capability to design and implement complete web solutions, showcasing my growth and versatility in the realm of full-stack development.</motion.p>
+        transition={{ duration: 0.5 }} className='mt-4'>This project sparked a deeper interest in the potential of web development. It was a pivotal moment when my passion for teaching organically evolved into a passion for coding. The success and impact of this website laid the foundation for my subsequent projects, including the development of innovative apps focused on <Link href="https://www.anderslandscience.com/" className='font-bold underline text-fuchsia-300'>weightlifting</Link> and <Link href="https://www.anderslandscience.com/" className='font-bold underline text-fuchsia-300'>diving</Link>. These applications are a testament to the skills I&apos;ve developed over time, highlighting my journey from an educator to a proficient full-stack developer. They demonstrate my ability to construct comprehensive digital solutions that encompass both front-end and back-end development. Each app serves as a practical example of my capability to design and implement complete web solutions, showcasing my growth and versatility in the realm of full-stack development.</motion.p>
     </div>
     </div>
   )
