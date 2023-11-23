@@ -1,11 +1,24 @@
-import Image from 'next/image'
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Intro from "./components/Intro";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center p-24">
-       <h1 className=''>Joshua Andersland</h1>
-       <p className='mt-4'>React Developer / Web app enthusiast</p>
-       <Image src="/github-mark.svg" width={250} height={250} />
+    <main className="bg-gray-800">
+      <Header />
+      <div className="flex flex-col justify-center items-center">
+        <Intro />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+      </div>
+      <Footer />
     </main>
   )
 }
